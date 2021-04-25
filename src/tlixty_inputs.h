@@ -15,8 +15,6 @@ enum action // action list with int identificator
     RIGHT
 };
 
-action result;
-
 class TlixtyButton
 {
 private:
@@ -39,11 +37,8 @@ public:
 
     void read()
     {
-        if (clicked)
-        {
-            clicked = 0;
-        }
 
+        clicked = 0;
         int currentState = !digitalRead(pin);
         if (currentState && !lastState)
         {
@@ -88,6 +83,7 @@ public:
 
     int read()
     {
+        action result;
         encoder->loop();
         int knob = encoder->getDirection();
         slc.read();
