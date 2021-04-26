@@ -51,6 +51,24 @@ public:
     }
 };
 
+class tlixtyCircle : public tlixtyUIComponent
+{
+private:
+    int r, thick;
+
+public:
+    tlixtyCircle(tlixtyGFX *_gfx, int _x, int _y, int _r, int _t = 1) : tlixtyUIComponent(_gfx, _x, _y)
+    {
+        r = _r;
+        thick = _t;
+    }
+
+    void draw()
+    {
+        gfx->drawCircle(x, y, r, thick);
+    }
+};
+
 class tlixtyPage
 {
 private:

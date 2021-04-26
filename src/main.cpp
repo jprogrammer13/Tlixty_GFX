@@ -20,6 +20,8 @@ void setup()
   tlxGFX.begin();
   testPage.addComponent(new tlixtyTitle(&tlxGFX, 5, 50, "Titolo di test"));
   testPage.addComponent(new tlixtyTitle(&tlxGFX, 5, 25, "Titolo di test 2"));
+  testPage.addComponent(new tlixtyCircle(&tlxGFX, 128 / 2, 64 / 2, 10));
+  testPage.addComponent(new tlixtyCircle(&tlxGFX, 128 / 2, 64 / 2, 20, 3));
 }
 
 void loop()
